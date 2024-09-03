@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Señas Smash</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link-main">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo">
+                
+                <i class="fa fa-phone"> +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div id="tarjeta-perfil" class="tarjeta-perfil">
+            <div class="principal">
+                <h1>¡Prueba nuestras asombrosas<br>Burgers!</h1>
+                <p>Hecho con amor</p>
+                <p>Te lo vas a perder?</p>
+                <div class="buttonPrimary">
+                    <a href="carrito.html" class="main-link">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Pedido</span>
+                    </a>
+                    <a href="#" class="main-link">
+                        <i class="fa fa-calendar"></i>
+                        <span>Reservar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-box"><img src="img/burger1.jpg"></div>
+            <div class="photo-box slider-box">
+                <div class="slider-container">
+                    <img src="img/Sliderpromo1.jpg">
+                    <img src="img/Sliderpromo2.jpg">
+                </div>
+            </div>
+            <div class="photo-box"><img src="img/burger2.jpg"></div>
+            <div class="photo-box"><img src="img/burger3.jpg"></div>
+            <div class="photo-box"><img src="img/burger4.jpg"></div>
+            <div class="photo-box"><img src="img/burger5.jpg"></div>
+        </div>
+    </main>
+    <div class="contact-support">
+        <button onclick="toggleContactMenu()" class="support-btn">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        </button>
+        <div id="supportDropdown" class="support-content">
+            <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+            <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+            <a href="faq.html">FAQ?</a>
+            <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <!-- banner -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h2>¡Oferta Especial!</h2>
+            <p>TODOS LOS MIÉRCOLES<br>Disfruta de nuestro 2x1 en Hamburguesas</p>
+            <button onclick="closeOverlay()">Cerrar</button>
+        </div>
+    </div>
+    <div id="cookie-notice" class="cookie-notice">
+        <div class="cookie-content">
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <p>Esta página utiliza cookies para mejorar la experiencia de usuario. <br>Al continuar navegando, aceptas
+                nuestro uso de cookies.</p>
+            <button onclick="closeCookieNotice()">Aceptar y cerrar</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

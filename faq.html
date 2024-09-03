@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone">
+                    +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+    <main class="politicaprivacidad">
+        <h1>Preguntas Frecuentes</h1>
+
+        <div class="faq">
+            <h3>¿Cómo puedo hacer una reserva online?</h3>
+            <p>Puedes hacer una reserva online visitando nuestra sección de 'Reservas' en la página web. Solo necesitas
+                seleccionar la fecha,
+                hora y número de personas para tu reserva. Recibirás una confirmación por correo electrónico una vez que
+                se haya completado el proceso.</p>
+        </div>
+
+        <div class="faq">
+            <h3>¿Ofrecen servicio de entrega a domicilio?</h3>
+            <p>Sí, ofrecemos servicio de entrega a domicilio. Puedes hacer tu pedido directamente a través de nuestra
+                página en la sección 'Pedidos',
+                o a través de nuestras aplicaciones asociadas de entrega de alimentos. Nuestro servicio de entrega está
+                disponible dentro de un radio
+                específico de la ubicación de nuestra hamburguesería.</p>
+        </div>
+
+        <div class="faq">
+            <h3>¿Puedo personalizar mi hamburguesa al hacer un pedido?</h3>
+            <p>¡Por supuesto! Al hacer tu pedido, podrás seleccionar los ingredientes y añadidos que desees. Personaliza
+                tu hamburguesa a tu gusto
+                eligiendo entre diferentes tipos de pan, quesos, salsas y más.</p>
+        </div>
+
+        <div class="faq">
+            <h3>¿Organizan eventos o celebraciones privadas en la hamburguesería?</h3>
+            <p>Sí, nuestra hamburguesería es el lugar perfecto para celebrar eventos especiales. Ofrecemos opciones para
+                reservar espacios exclusivamente
+                para grupos grandes. Por favor, contáctanos para más detalles y te ayudaremos a planificar una
+                experiencia memorable.</p>
+        </div>
+
+
+        <div class="faq">
+            <h3>¿Tienen opciones vegetarianas o veganas?</h3>
+            <p>Entendemos la importancia de la inclusión alimentaria y ofrecemos una variedad de opciones vegetarianas y
+                veganas en nuestro menú.
+                ¡Echa un vistazo a nuestras opciones especiales y disfruta de una deliciosa hamburguesa a tu manera!</p>
+        </div>
+    </main>
+
+
+    <div class="contact-support">
+        <button onclick="toggleContactMenu()" class="support-btn">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        </button>
+        <div id="supportDropdown" class="support-content">
+            <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+            <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+            <a href="faq.html">FAQ?</a>
+            <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+
+        </div>
+    </div>
+
+    <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <div id="cookie-settings" class="cookie-settings" style="display : none">
+        <div class="cookie-content">
+            <h2>Configuración de Cookies</h2>
+
+            <div class="cookie-category">
+                <h3>Cookies Esenciales del Sitio</h3>
+                <p>Estas cookies son necesarias para el funcionamiento básico del sitio y siempre están activas.</p>
+                <button disabled>Activadas</button>
+            </div>
+
+            <div class="cookie-category">
+                <h3>Cookies de Análisis Web</h3>
+                <p>Estas cookies nos permiten contar visitas y fuentes de tráfico para poder medir y mejorar el
+                    rendimiento de nuestro sitio.</p>
+                <button id="toggle-analytics" onclick="toggleAnalytics()">Activar</button>
+            </div>
+
+            <a href="politica-cookies.html" class="cookie-policy-link">Política de Cookies</a>
+            <button onclick="saveCookieSettings()">Guardar Configuración</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

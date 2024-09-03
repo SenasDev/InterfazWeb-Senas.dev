@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone">
+                    +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+    <main class="politicaprivacidad">
+        <div>
+            <div class="event-title">
+                <h1>Maduracion de la carne</h1>
+            </div>
+            <div class="contenido-blog">
+                <h3>Introducción</h3>
+                <p>La carne madurada es un plato al alza. Cada vez más personas sienten la llamada por esta especialidad
+                    y las ganas de aventurarse con sus versiones más extremas. Es sobre todo con estas últimas, las
+                    carnes de larga maduración,
+                    con las que la controversia también se sienta a la mesa. Os lo contamos todo, a continuación
+                </p>
+                <figure>
+                    <img src="img/carnemadurada.jpg.webp" alt="Carne Madurada">
+                </figure>
+
+                <h3>Qué son la carnes maduradas</h3>
+                <p>La carne madurada es aquella que ha pasado por un proceso de asentamiento en el cual ha perdido gran
+                    cantidad de agua y en el
+                    que se ha producido la rotura de las fibras, lo que intensifica su sabor y aumenta su ternura.
+                    La duración de la maduración dependerá en gran medida del tipo de carne. El caso del aviar, se
+                    caracteriza por ser lo
+                    suficientemente tierno como para poder ser consumida casi de inmediato. En cuanto el ovino, es
+                    decir, carneros, ovejas y corderos,
+                    y el porcino, existe un tiempo determinado por el faenado, oreo del canal y distribución que
+                    conllevan entre 2 y 4 días de reposo
+                    bajo condiciones de temperatura controladas que garantizan en sí mismo el punto de ternura óptima.
+                    En cambio, el giro argumental se
+                    da con el bovino. Esta categoría, que incluye vaca, buey y toro (si quieres puedes consultar las
+                    diferencias entre la carne de vaca y de buey),
+                    es la de las carnes que destacan por su dureza. Siendo pulcros, la ternera también forma parte de
+                    este grupo, pero poco problema presenta al ser
+                    sacrificada entre los 8 y 12 meses. No ocurre así con la vaca a la que suele darse sacrificio
+                    entorno a los 3 años o con el buey que es llevado al
+                    matadero con 4 años. Su carne está más envejecida y el músculo se presenta demasiado rígido como
+                    para consumirse en un espacio de tiempo breve. Es entonces,
+                    cuando la carne se madura porque es la mejor forma de conseguir una textura más tierna, y aprovechar
+                    al máximo el potencial de las carnes más viejas. Además,
+                    el hecho de que la carne de vaca es mucho más accesible y económica que la de buey, ha convertido a
+                    la carne madurada de vaca en la estrella de los procesos de maduración.
+                <figure>
+                    <img src="img/carnecapricho.webp" alt="Chuletón">
+                    <figcaption>Chuletón de Restaurante el Capricho(Leon)</figcaption>
+                </figure>
+                </p>
+                <h3>Maduraciones extremas:</h3>
+                <p>¿carnes maduras o podridas?
+
+                    <br>Maduración sí, pero, ¿cuál es el límite? La visión de los expertos es unánime: una maduración en
+                    seco de unos 35 a 40 días, siempre respetando las características individuales de la pieza, resalta
+                    el sabor de la carne y la hace ideal para su consumo.
+                <figure>
+                    <img src="img/maduracioncarne2.jpg" alt="Diferencia Chuletón Días">
+                    <figcaption>Diferencia Madruración</figcaption>
+                </figure>
+
+
+
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="contact-support">
+        <button onclick="toggleContactMenu()" class="support-btn">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        </button>
+        <div id="supportDropdown" class="support-content">
+            <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+            <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+            <a href="faq.html">FAQ?</a>
+            <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+
+        </div>
+    </div>
+
+    <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

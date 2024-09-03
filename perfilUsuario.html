@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Usuario</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone"> +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count">CARRITO (0)</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Main del perfil de usuario  -->
+        <div class="perfil-container">
+            <!-- Header del perfil -->
+            <div class="perfil-header">
+                <div class="perfil-foto">
+                    <!-- Al hacer clic en la imagen, se activará el input de tipo file -->
+                    <label for="inputFotoPerfil" class="label-foto-usuario">
+                        <span class="tooltip-text">Click para cambiar la imagen de tu perfil</span>
+                        <img id="fotoUsuario" src="img/perfil.jpg" alt="Foto del usuario" class="imagen-perfil">
+                    </label>
+                    <input type="file" id="inputFotoPerfil" style="display: none;" onchange="cambiarFotoPerfil(event)">
+                </div>
+                <div class="perfil-nombre">
+                    <h1 id="nombreCompletoHeader">Nombre del Usuario</h1>
+                </div>
+            </div>
+            <!-- Información del perfil  -->
+
+            <div class="perfil-info">
+
+                <div class="perfil-seccion">
+                    <!-- -------------------Datos de Usuario-------------------- -->
+                    <h2>Datos del Usuario</h2>
+                    <div class="datos-usuario">
+                        <!--Nombre -->
+                        <div class="datos-info-usuario">
+                            <p><strong>Nombre:</strong></p>
+                            <p><span>Jorge</span></p>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="datos-info-usuario">
+                            <p><strong>Apellidos:</strong></p>
+                            <p><span>Santiago Señas</span></p>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="datos-info-usuario">
+                            <p><strong>Teléfono:</strong></p>
+                            <p><span>123-456-7890</span></p>
+                        </div>
+                    </div>
+
+                    <!-- direcciones Usuario  -->
+
+                    <h2>Direcciones del Usuario</h2>
+
+                    <div class="contenedor-direcciones">
+                        <!-- Dirección 1 -->
+                        <div class="direcciones-usuario">
+                            <p><strong>Dirección 1:</strong></p>
+                            <p><span>C/ Santiago Compostela 84</span></p>
+                            <p><span>Madrid</span></p>
+                            <p><span>Madrid</span></p>
+                            <p><span>CP 28035</span></p>
+                        </div>
+                        <!-- Dirección 2 -->
+                        <div class="direcciones-usuario">
+                            <p><strong>Dirección 2:</strong></p>
+                            <p><span>C/ Real 60</span></p>
+                            <p><span>Castilleja de la Cuesta</span></p>
+                            <p><span>Sevilla</span></p>
+                            <p><span>CP 42950</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------Pedidos del Usuario-------------------- -->
+
+                <div class="perfil-seccion">
+                    <h2>Pedidos Realizados</h2>
+                    <!-- Primer Pedido -->
+                    <div class="pedido">
+                        <div class="pedido-info">
+                            <p><strong>Número de Pedido:</strong> #12345</p>
+                            <p><strong>Productos:</strong></p>
+                            <ul>
+                                <li>Producto A</li>
+                                <li>Producto B</li>
+                                <li>Producto C</li>
+                            </ul>
+                        </div>
+                        <div class="pedido-total">
+                            <p><strong>Total:</strong> 50.00€</p>
+                            <p><strong>Valoración:</strong>
+                                <span class="valoracion">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Segundo Pedido -->
+                    <div class="pedido">
+                        <div class="pedido-info">
+                            <p><strong>Número de Pedido:</strong> #67890</p>
+                            <p><strong>Productos:</strong></p>
+                            <ul>
+                                <li>Producto D</li>
+                                <li>Producto E</li>
+                            </ul>
+                        </div>
+                        <div class="pedido-total">
+                            <p><strong>Total:</strong> 30.00€</p>
+                            <p><strong>Valoración:</strong>
+                                <span class="valoracion">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones del perfil de Usuario  -->
+
+                <a href="editarUsuario.html" id="editardatos" class="editar-datos">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Editar Datos</span>
+                </a>
+
+                <a href="javascript:void(0);" onclick="eliminarCuenta()" class="trash-button" id="eliminar-cuenta">
+                    <i class="fa fa-trash"></i>
+                    <span>Eliminar Cuenta</span>
+                </a>
+
+                <a href="javascript:void(0);" onclick="cerrarSesion()" class="trash-button" id="cerrar-sesion-button">
+                    <i class="fa fa-sign-out"></i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+    </main>
+    <div class="contact-support">
+        <button onclick="toggleContactMenu()" class="support-btn">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        </button>
+        <div id="supportDropdown" class="support-content">
+            <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+            <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+            <a href="faq.html">FAQ?</a>
+            <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+
+        </div>
+    </div>
+
+    <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

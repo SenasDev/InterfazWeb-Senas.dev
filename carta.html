@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+     <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+        <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone"> +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a> 
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="productos">
+            <!-- Hamburguesas -->
+            <div id="categoria-hamburguesas" class="contenido">
+                <h1>Hamburguesas</h1>
+                <div class="articulos">
+                    <div class="card">
+                        <img src="img/burger1.jpg" alt="Hamburguesa Clásica">
+                        <h3>Hamburguesa Clásica</h3>
+                        <p><span>9</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p> Carne madurada, queso, huevo, bacon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/burger2.jpg" alt="Hamburguesa Veggie">
+                        <h3>Hamburguesa Veggie</h3>
+                        <p><span>10</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p>Heura, cebolla frita, pimientos, queso, lechuga</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/burger3.jpg" alt="Hamburguesa Picante">
+                        <h3>Hamburguesa Picante</h3>
+                        <p><span>10,5</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p> Carne madurada, queso, jalapeños, lechuga</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/burger4.jpg" alt="Hamburguesa BBQ">
+                        <h3>Hamburguesa BBQ</h3>
+                        <p><span>11,5</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p> Carne madurada, salsa bbq, cebolla frita, queso, bacon.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/burger5.jpg" alt="Hamburguesa Del Chef">
+                        <h3>Hamburguesa Del Chef</h3>
+                        <p><span>12,5</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p> Pollo Frito, salsa queso trufada, tomate, huevo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/burger6.jpg" alt="Hamburguesa Super Smash">
+                        <h3>Hamburguesa Boletus</h3>
+                        <p><span>11</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p> Carne madurada,boletus a la plancha, queso, tomate, cebolla caramelizada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Acompañantes -->
+            <div id="categoria-acompanamientos" class="contenido" hidden>
+                <h1>Acompañantes</h1>
+                <div class="articulos">
+                    <div class="card">
+                        <img src="img/patatas1.jpg" alt="Patatas Normales">
+                        <h3>Patatas Normales</h3>
+                        <p><span>3</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Crujientes y con sal</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/aroscebolla.jpg" alt="Aros de Cebolla">
+                        <h3>Aros de Cebolla</h3>
+                        <p><span>4</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Crujientes y deliciosos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/ensalada.jpg" alt="Ensalada">
+                        <h3>Ensalada</h3>
+                        <p><span>4</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <i class="fa fa-info-circle info-icon"></i>
+                            <div class="product-info info-icon">
+                                <p>Ingredientes:</p>
+                                <p> Mix lechugas, tomate, pepino, cebolla crispy salsa a elegir</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bebidas -->
+            <div id="categoria-bebidas" class="contenido" hidden>
+                <h1>Bebidas</h1>
+                <div class="articulos">
+                    <div class="card">
+                        <img src="img/refresco.jpg" alt="Refresco">
+                        <h3>Refresco</h3>
+                        <p><span>2,8</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/cervezaartesanal.jpg" alt="Cerveza Artesanal">
+                        <h3>Cerveza Artesanal</h3>
+                        <p><span>5</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/limonada.jpg" alt="Limonada Natural">
+                        <h3>Limonada Natural</h3>
+                        <p><span>3,5</span>€</p>
+                        <div class="card-actions">
+                            <button onclick="addToCart(this)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </main>
+     <div class="contact-support">
+            <button onclick="toggleContactMenu()" class="support-btn">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+            </button>
+            <div id="supportDropdown" class="support-content">
+                <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+                <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+                <a href="faq.html">FAQ?</a>
+                <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+
+            </div>
+        </div>
+
+     <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

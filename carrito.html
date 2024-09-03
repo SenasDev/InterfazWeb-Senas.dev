@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARRITO</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone"> +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div id="cart-items">
+            <div class="container">
+                <h1>Productos Añadidos</h2>
+                    <div id="cart-products">
+                        <!-- Los artículos del carrito se añaden aquí -->
+                    </div>
+            </div>
+            <div class="column summary">
+                <div class="cart-total">
+                    <h1>Resumen</h2>
+                        <p id="total-cart-price">Total del carrito: 0€</p>
+                        <a href="#" id="checkout-cart" class="shopping-button">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Comprar</span>
+                        </a>
+                        <a id="empty-cart" class="trash-button">
+                            <i class="fa fa-trash"></i>
+                            <span>Eliminar</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="contact-support">
+        <button onclick="toggleContactMenu()" class="support-btn">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        </button>
+        <div id="supportDropdown" class="support-content">
+            <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+            <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+            <a href="faq.html">FAQ?</a>
+                <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

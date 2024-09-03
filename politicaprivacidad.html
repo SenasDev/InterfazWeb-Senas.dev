@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politica de Privacidad</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone"> +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+    <main class="politicaprivacidad">
+        <h1>Política de Privacidad</h1>
+        <section>
+            <h2>Introducción</h2>
+            <p>En Señas Burger, nos comprometemos a proteger la privacidad y la seguridad de nuestros clientes. Esta política de privacidad explica cómo recopilamos, usamos, compartimos y protegemos su información personal.</p>
+    
+            <h2>Información que Recopilamos</h2>
+            <p>Recopilamos información que nos proporciona al realizar un pedido, como su nombre, dirección de correo electrónico, dirección de entrega y detalles de pago. También podemos recopilar información sobre su uso de nuestro sitio web a través de cookies y tecnologías similares.</p>
+    
+            <h2>Uso de la Información</h2>
+            <p>Utilizamos su información para procesar sus pedidos, comunicarnos con usted, mejorar nuestros servicios y para fines de marketing, siempre con su consentimiento cuando sea necesario.</p>
+    
+            <h2>Compartir Información</h2>
+            <p>No compartimos su información personal con terceros, excepto para cumplir con la ley o proteger nuestros derechos.</p>
+    
+            <h2>Seguridad de la Información</h2>
+            <p>Tomamos medidas razonables para proteger su información personal contra el acceso no autorizado, el uso indebido o la divulgación.</p>
+    
+            <h2>Sus Derechos</h2>
+            <p>Tiene derecho a acceder, corregir o eliminar su información personal. Puede contactarnos para ejercer estos derechos.</p>
+    
+            <h2>Cambios a la Política de Privacidad</h2>
+            <p>Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento, por lo que le recomendamos revisarla periódicamente.</p>
+    
+            <h2>Contacto</h2>
+            <p>Si tiene preguntas sobre nuestra política de privacidad, contáctenos en privacidad@senasburger.com.</p>
+            <button onclick="configuracioncookies()">Configuración Cookies</button>
+        </section>
+    </main>
+    
+    
+     <div class="contact-support">
+            <button onclick="toggleContactMenu()" class="support-btn">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+            </button>
+            <div id="supportDropdown" class="support-content">
+                <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+                <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+                <a href="faq.html">FAQ?</a>
+                <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+
+            </div>
+        </div>
+    
+    <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <div id="cookie-settings" class="cookie-settings"  style="display : none">
+        <div class="cookie-content">
+            <h2>Configuración de Cookies</h2>
+    
+            <div class="cookie-category">
+                <h3>Cookies Esenciales del Sitio</h3>
+                <p>Estas cookies son necesarias para el funcionamiento básico del sitio y siempre están activas.</p>
+                <button disabled>Activadas</button>
+            </div>
+    
+            <div class="cookie-category">
+                <h3>Cookies de Análisis Web</h3>
+                <p>Estas cookies nos permiten contar visitas y fuentes de tráfico para poder medir y mejorar el rendimiento de nuestro sitio.</p>
+                <button id="toggle-analytics" onclick="toggleAnalytics()">Activar</button>
+            </div>
+    
+            <a href="politica-cookies.html" class="cookie-policy-link">Política de Cookies</a>
+            <button onclick="saveCookieSettings()">Guardar Configuración</button>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+
+</html>

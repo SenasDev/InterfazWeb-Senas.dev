@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro/Login</title>
+    <link rel="icon" href="img/Logo.gif">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button class="hamburger-menu" onclick="toggleNavMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <div class="nav-link dropdown">
+                <span onclick="toggleDropdownMenu()">CARTA</span>
+                <div class="dropdown-content" id="submenu">
+                    <a href="carta.html?categoria=hamburguesas">Hamburguesas</a>
+                    <a href="carta.html?categoria=acompanamientos">Acompañantes</a>
+                    <a href="carta.html?categoria=bebidas">Bebidas</a>
+                </div>
+            </div>
+            <a href="index.html" class="nav-logo"><img src="img/logo.gif" class="center-logo"><i class="fa fa-phone"> +34 911 23 45 67</i></a>
+            <a href="registroLogin.html" class="nav-link" id="navUsuario">
+                <i class="fa fa-user"></i>
+                <span>USUARIO</span>
+            </a>
+            <a href="perfilUsuario.html" class="nav-link" id="navPerfil" style="display: none;">
+                <i class="fa fa-user"></i>
+                <span id="nombreUsuarioHeader"></span>
+            </a>
+            <a href="carrito.html" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div id="tarjeta-perfil" class="tarjeta-perfil">
+
+            <!-- Formulario de inicio de sesión Oculto-->
+
+            <div class=formulario id="formularioLogin" style="display: none;">
+                <h1>LOGIN</h1>
+                <input type="text" id="loginUsername" placeholder="Usuario">
+                <input type="password" id="loginPassword" placeholder="Contraseña">
+                <button onclick="procesarInicioSesion()">Iniciar Sesión</button>
+            </div>
+
+            <!-- Formulario de registro Oculto -->
+            <div class=formulario id="formularioRegistro" style="display: none;">
+                <h1>REGISTRO</h1>
+                <input type="text" id="username" placeholder="Nuevo Nombre Usuario">
+                <input type="password" id="password" placeholder="Nueva Contraseña">
+                <button onclick="procesarRegistro()">Registrarse</button>
+            </div>
+
+            <!-- Mensaje de bienvenida Oculto-->
+            <div id="mensajeBienvenida" style="display: none;">
+                <p>Bienvenido, <span id="nombreUsuario"></span>!</p>
+                <button onclick="cerrarSesion()">Cerrar Sesión</button>
+            </div>
+            <div id="mensajeUsuario" class="mensaje-usuario"></div>
+            <h2>INICIA SESIÓN o REGÍSTRATE</h2>
+            
+            <h3>Para disfrutar de nuestros productos</h3>
+
+                <!-- Botones de inicio de sesión y registro -->
+                <div id="botonesAcceso">
+                    <a class="nav-link" onclick="mostrarFormulario('login')">
+                        <i class="fa fa-sign-in"></i>
+                        <span>Iniciar Sesión</span>
+                    </a>
+                    <a class="nav-link" onclick="mostrarFormulario('registro')">
+                        <i class="fa fa-user-plus"></i>
+                        <span>Registrarse</span>
+                    </a>
+                </div>
+
+        </div>
+    </main>
+     <div class="contact-support">
+            <button onclick="toggleContactMenu()" class="support-btn">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+            </button>
+            <div id="supportDropdown" class="support-content">
+                <a href="contacto.html">Tienes Dudas? Contáctanos</a>
+                <a href="politicaprivacidad.html">Consulta nuestra politica de cookies</a>
+                <a href="faq.html">FAQ?</a>
+                <a href="tel:+34911234567">Telefono: <br><strong>+34 911 23 45 67</strong></a>
+
+            </div>
+        </div>
+
+     <footer>
+        <a href="contacto.html">
+            <span>Contacto</span>
+            <i class="fa fa-envelope"></i>
+            <a href="politicaprivacidad.html">
+                <span>Politica Privacidad</span>
+                <i class="bi bi-shield-fill-exclamation"></i>
+            </a>
+            <a href="tel:+34911234567">Teléfono : <strong>+34 911 23 45 67</strong></a>
+        </a>
+        <p>&copy; 2024 Señas Burger. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
