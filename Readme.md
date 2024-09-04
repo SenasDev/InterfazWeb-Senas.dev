@@ -26,6 +26,7 @@
 - JavaScript
 
 **Contacto:**
+* Móvil: +34 635715157
 * Correo: jorgesantiagosenas@gmail.com
-* GitHub: https://github.com/Senasjorge
-* Linkedin: https://www.linkedin.com/in/jorge-señas
+* GitHub: https://github.com/SenasDev
+* Linkedin: https://www.linkedin.com/in/senas-dev
